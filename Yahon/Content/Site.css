@@ -368,3 +368,132 @@ a {
 .tab-content > div:last-child {
   display: none;
 }
+
+
+
+/*************************************************************/
+/***********************Giao diện item sản phẩm***************/
+/*************************************************************/
+/*Khung chứa*/
+.product-sec1 {
+    box-shadow: 0px 0px 15px 0px #D6D6D6;
+    padding: 30px 20px;
+    margin-bottom: 14px;
+}
+
+h3.heading-tittle {
+    text-align: center;
+    color: #000;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.product-men {
+    padding: 0 .5em;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+
+.men-thumb-item {
+    text-align: center;
+}
+
+.item-info-product {
+    margin-top: 40px;
+    text-align: center;
+}
+
+    .item-info-product h4 a {
+        color: #000;
+        font-size: 17px;
+        letter-spacing: 1px;
+    }
+
+.info-product-price {
+    margin: 12px 0;
+}
+
+span.item_price {
+    font-size: 18px;
+    color: #d60404;
+}
+
+input[type="button"], input[type="submit"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+input.button {
+    font-size: 13px;
+    color: #fff;
+    background: #1accfd;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    width:90%;
+    text-transform: uppercase;
+    padding: 13px;
+    outline: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+input.button:hover {
+    background: #1accfd;
+    opacity:0.6;
+}
+    .nhan-hang{
+        margin: 0 5px;
+    }
+    .item-nhan-hang{
+        width: 100%;
+        height: auto;
+        margin: 2px 20px;
+    }
+.ds-nhan-hang {
+    background-color: #F9F9F9;
+    padding: 20px;
+}
+
+
+
+
+/************/
+/*Banner*/
+.product-sec1.product-sec2{
+    background: url(/images/bg1.jpg)no-repeat 0px 0px;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+}
+.effect-bg {
+    margin-top: 40px;
+}
+.effect-bg h3 {
+    color: #fff;
+    font-size: 47px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.effect-bg h6 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin: 18px 0;
+    color: #fff;
+}
+.effect-bg p {
+    color: #000;
+}
+h3.w3l-nut-middle {
+    position: absolute;
+    right: 30%;
+    bottom: 46%;
+    font-size: 35px;
+    font-weight: 800;
+    color: rgba(10, 10, 10, 0.38);
+    transform: rotate(-64deg);
+    -ms-transform: rotate(-64deg); /* IE 9 */
+    -webkit-transform: rotate(-64deg);
+}
