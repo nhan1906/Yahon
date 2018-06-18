@@ -1,5 +1,10 @@
 ﻿@model Yahon.Models.CustomerSession
 
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
