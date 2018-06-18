@@ -15,7 +15,14 @@ namespace Yahon.Models
         public int ProductPrice { get; set; }
         [Required]
         public string ProductDetail { get; set; }
-        
+        [Required]
+        public string ProductImage { get; set; }
+        [ForeignKey("ProductType")]
+        public int ProductTypeId { get; set; }
+        public ProductType ProductType { get; set; }
+        [ForeignKey("Brand")]
+        public int BrandId { get; set; }
+        public Brand Brand { get; set; }
         public virtual ICollection<PurchaseProduct> PurchaseProduct { get; set; }
     }
 }

@@ -119,30 +119,6 @@ Image credits: unsplash.com
 }
 
 /********************************/
-/*       Slides backgrounds     */
-/********************************/
-.fade-carousel .slides .slide-1,
-.fade-carousel .slides .slide-2,
-.fade-carousel .slides .slide-3 {
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-}
-
-.fade-carousel .slides .slide-1 {
-    background-image: url(http://placehold.it/1000x1000);
-}
-
-.fade-carousel .slides .slide-2 {
-    background-image: url(http://placehold.it/1000x1000);
-}
-
-.fade-carousel .slides .slide-3 {
-    background-image: url(http://placehold.it/1000x1000);
-}
-
-/********************************/
 /*          Media Queries       */
 /********************************/
 @media screen and (min-width: 980px) {

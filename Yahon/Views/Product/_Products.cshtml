@@ -1,0 +1,20 @@
+﻿@model List<Yahon.Models.Product>
+
+<!---->
+
+@if (Model != null)
+{
+<div class="w3-row-padding">
+    @foreach (var item in Model)
+    {
+        <div class="w3-col l3 m6 w3-margin-bottom">
+            <div class="w3-display-container">
+                <div class="w3-display-topleft w3-black w3-padding">Giá: @item.ProductPrice VNĐ</div>
+
+                <img src="@Url.Content("~/images/products/" + item.ProductImage)" alt="House" style="width:350px; height: 160px;">
+            </div>
+        </div>
+    }
+</div>
+
+}

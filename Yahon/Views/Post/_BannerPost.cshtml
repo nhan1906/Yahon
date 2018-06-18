@@ -1,0 +1,48 @@
+﻿@using Yahon.Models
+@model List<Post>
+
+@if (Model != null)
+{
+    <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="4000" id="bs-carousel">
+    <!-- Overlay -->
+    <div class="overlay"></div>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item slides active">
+            <img class="img-post-size" src="@Url.Content("~/images/banners/" + @Model.ToArray()[0].PostImage)" />
+            <div class="hero">
+                <hgroup>
+                    <h1>@Model.ToArray()[0].PostTitle</h1>
+                    <h3>@Model.ToArray()[0].content</h3>
+                </hgroup>
+            </div>
+        </div>
+        <div class="item slides">
+            <img class="img-post-size" src="@Url.Content("~/images/banners/" + @Model.ToArray()[1].PostImage)"/>
+            <div class="hero">
+                <hgroup>
+                    <h1>@Model.ToArray()[1].PostTitle</h1>
+                    <h3>@Model.ToArray()[1].content</h3>
+                </hgroup>
+            </div>
+        </div>
+        <div class="item slides">
+            <img class="img-post-size" src="@Url.Content("~/images/banners/" + @Model.ToArray()[2].PostImage)" />
+            <div class="hero">
+                <hgroup>
+                    <h1>@Model.ToArray()[2].PostTitle</h1>
+                    <h3>@Model.ToArray()[2].content</h3>
+                </hgroup>
+            </div>
+        </div>
+    </div>
+</div>
+
+}

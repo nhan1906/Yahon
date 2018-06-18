@@ -13,82 +13,107 @@ namespace Yahon.Models
         }
 
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Brand> Brands { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
         public DbSet<PurchaseProduct> PurchaseProducts { get; set; }
         //Login sessions
         public DbSet<CustomerSession> CustomerSessions { get; set; }
+        public DbSet<Post> Posts { get; set; }
         
     }
 
-    /*public class DatabaseContextInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext>()
+    public class DatabaseContextInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext>
     {
         protected override void Seed(DatabaseContext db)
         {
-            IList<Customer> defaultCustomers = new List<Customer>();
-            
-            defaultCustomers.Add(new Customer()
+            IList<Brand> defaultBrands = new List<Brand>();
+
+            defaultBrands.Add(new Brand()
             {
-                CustomerId = 0,
-                Email = "userEmail1@domain.com",
-                CreationDate = DateTime.Now,
-                Password = "asdasd",
-                FirstName = "FirstName1",
-                LastName = "LastName1",
-                DateOfBirth = DateTime.Now,
-                Address = "street1",
-                Phone = "12345678",
+                BrandId = 0,
+                BrandName = "BabyHood",
+                BrandImage = "babyhood.PNG",
             });
-            defaultCustomers.Add(new Customer()
+            defaultBrands.Add(new Brand()
             {
-                CustomerId = 1,
-                Email = "userEmail1@domain.com",
-                CreationDate = DateTime.Now,
-                Password = "asdasd",
-                FirstName = "FirstName1",
-                LastName = "LastName1",
-                DateOfBirth = DateTime.Now,
-                Address = "street1",
-                Phone = "12345678"
+                BrandId = 1,
+                BrandName = "Best",
+                BrandImage = "best.png",
             });
-            defaultCustomers.Add(new Customer()
+            defaultBrands.Add(new Brand()
             {
-                CustomerId = 2,
-                Email = "userEmail2@domain.com",
-                CreationDate = DateTime.Now,
-                Password = "asdasd",
-                FirstName = "FirstName2",
-                LastName = "LastName2",
-                DateOfBirth = DateTime.Now,
-                Address = "street2",
-                Phone = "12345678"
+                BrandId = 2,
+                BrandName = "Fair Lady",
+                BrandImage = "brand-fairlady1528254859.jpg",
             });
-            defaultCustomers.Add(new Customer()
+            defaultBrands.Add(new Brand()
             {
-                CustomerId = 3,
-                Email = "userEmail3@domain.com",
-                CreationDate = DateTime.Now,
-                Password = "asdasd",
-                FirstName = "FirstName3",
-                LastName = "LastName3",
-                DateOfBirth = DateTime.Now,
-                Address = "street3",
-                Phone = "12345678"
+                BrandId = 3,
+                BrandName = "Keepers",
+                BrandImage = "brand_box_copy.jpg",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 4,
+                BrandName = "Let Green",
+                BrandImage = "let-green.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 5,
+                BrandName = "MotherHood",
+                BrandImage = "motherhood.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 6,
+                BrandName = "Nuna",
+                BrandImage = "nuna.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 7,
+                BrandName = "Pop One",
+                BrandImage = "pop-one.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 8,
+                BrandName = "Pop Puf",
+                BrandImage = "pop-puf.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 9,
+                BrandName = "Puffme",
+                BrandImage = "puffme12871.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 10,
+                BrandName = "Travel Mate",
+                BrandImage = "travel-mate.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 11,
+                BrandName = "Wet One",
+                BrandImage = "wet-one.png",
+            });
+            defaultBrands.Add(new Brand()
+            {
+                BrandId = 12,
+                BrandName = "Wuna",
+                BrandImage = "wuna.png",
             });
 
-            int i = 0;
-            List<Customer> list = db.Customers.ToList();
-            foreach (var customer in list)
+            foreach(var item in defaultBrands)
             {
-                customer.Purchases.Add(new Purchase
-                {
-                    PurchaseID = i,
-                    CustomerID = i,
-                    PurchaseDate = DateTime.Now,
-                    PurchasePrice = 100000,
-                    
-                });
+
+                db.Brands.Add(item);
             }
         }
-    }*/
+    }
 }

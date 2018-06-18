@@ -13,6 +13,15 @@ namespace Yahon.Controllers
 {
     public class AccountController: Controller
     {
+
+         [HttpGet]
+        public PartialViewResult _Login()
+        {
+            
+            return PartialView();
+        }
+        
+
          [HttpGet]
         public ActionResult LogIn()
         {
@@ -69,9 +78,9 @@ namespace Yahon.Controllers
         }
 
         [HttpGet]
-        public ActionResult Register()
+        public PartialViewResult _Register()
         {
-            return View();
+            return PartialView();
         }
         
         [HttpPost]

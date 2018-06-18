@@ -1,0 +1,60 @@
+﻿@using Yahon.Models
+@using System.Collections
+@model List<Brand>
+
+@if (Model != null)
+{
+    Brand[] list = Model.ToArray();
+<div class="row" style="margin: 0 20px;">
+    <div class="row">
+        <div class="col-md-9">
+            <h3>
+                Nhãn hiệu
+            </h3>
+        </div>
+        <div class="col-md-3">
+            <!-- Controls -->
+            <div class="controls pull-right hidden-xs">
+                <a class="left fa fa-chevron-left btn btn-success" href="#carousel-example"
+                   data-slide="prev"><</a><a class="right fa fa-chevron-right btn btn-success" href="#carousel-example"
+                                            data-slide="next">></a>
+            </div>
+        </div>
+    </div>
+    <div id="carousel-example" class="carousel slide hidden-xs" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="w3-row">
+                    @for (int i = 0; i < 6; i++)
+                            {
+                                Brand brand = list[i];
+                        <div class="w3-col m2">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="@Url.Content("~/images/brands/" + @brand.BrandImage)" class="img-responsive img-brand-size" alt="a" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="item">
+                <div class="w3-row">
+                    @for (int i = 6; i < 12; i++)
+                            {
+                                Brand brand = list[i];
+                        <div class="w3-col m2">
+                            <div class="col-item">
+                                <div class="photo">
+                                    <img src="@Url.Content("~/images/brands/" + @brand.BrandImage)" class="img-responsive img-brand-size" alt="a" />
+                                </div>
+                            </div>
+                        </div>
+                    }        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
