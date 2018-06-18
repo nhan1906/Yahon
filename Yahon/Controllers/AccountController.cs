@@ -15,19 +15,11 @@ namespace Yahon.Controllers
     {
 
          [HttpGet]
-        public PartialViewResult _Login()
+        public PartialViewResult Login()
         {
             
             return PartialView();
         }
-        
-
-         [HttpGet]
-        public ActionResult LogIn()
-        {
-            return View();
-        }
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult LogIn(CustomerSession session, string returnUrl = "")
@@ -78,7 +70,7 @@ namespace Yahon.Controllers
         }
 
         [HttpGet]
-        public PartialViewResult _Register()
+        public PartialViewResult Register()
         {
             return PartialView();
         }

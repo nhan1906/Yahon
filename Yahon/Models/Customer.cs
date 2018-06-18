@@ -19,7 +19,7 @@ namespace Yahon.Models
         [Display(Name = "Password")]
         [DataType(DataType.Password)]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Password field cannot be blank.")]
-        [MinLength(12, ErrorMessage = "Password must be at least {1} characters.")]
+        [MinLength(6, ErrorMessage = "Password must be at least {1} characters.")]
         public string Password { get; set; }
         
         public byte[] Salt { get; set; }

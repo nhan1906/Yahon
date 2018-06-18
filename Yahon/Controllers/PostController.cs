@@ -14,8 +14,6 @@ namespace Yahon.Controllers
         {
             return View();
         }
-
-        [HttpGet]
         public PartialViewResult _BannerPost()
         {
             List<Post> listProduct = null;

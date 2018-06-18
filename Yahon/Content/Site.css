@@ -4,10 +4,6 @@
     background: black;
     margin-left: 10px;
 }
-.navbar-inverse, .navbar-collapse, .navbar-default {
-    background: #ffffff !important;
-    border:none;
-}
 /*Thay đổi màu của nav khi hover*/
 .item-menu:hover {
     color: #f39c12 !important;
