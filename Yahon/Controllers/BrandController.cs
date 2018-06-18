@@ -9,11 +9,6 @@ namespace Yahon.Controllers
 {
     public class BrandController : Controller
     {
-        // GET: Brand
-        public ActionResult Index()
-        {
-            return View();
-        }
         [HttpGet]
         public PartialViewResult _Brands()
         {
